@@ -1,34 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Linq;
-//int[] numbers = [1, 2, 3, 4, 5];
-//int[] numbers2 = new int[5] { 1, 2, 3, 4, 5 };
-//numbers[0] = 32;
-//Console.WriteLine(numbers[1]);
-//Console.WriteLine(numbers.Length);
-
-//foreach(var i in numbers) {
-//    Console.WriteLine(i);
-//}
-
-//for (int i = 0; i < numbers.Length; i++) {
-//    Console.WriteLine(numbers[i]);
-//}
-
-//dynamic[] t = [1, 2, 3, 4, "ss"];
-//object[] t2 = [1, 2, 3, 4, "ss"];
-
-//List<string> people = ["daa", "xcv", "seeer"];
-//List<string> people1 = new List<string> ["daa", "xcv", "seeer"];
-//Console.WriteLine(people.Count);
-
-//foreach (var i in people) {
-//    Console.WriteLine(i);
-//}
-//people.Add("jjj");
-//people.Remove("daa");
-//people.RemoveAt(1);
-//people.Insert(0, "aa");
 
 // Задание 1
 string[] obj = ["sword", "shield", "potion", "sword", "potion", "potion"];
@@ -89,10 +61,28 @@ int[] num4 = [15, 20, 25, 30, 10];
 double aver = num4.Average();
 Console.WriteLine(aver);
 
-// 8 Задание 8
-string[] t2 = ["Меч", "Ласточка", "Бомба", "Зелье", "Гром", "Ласточка"];
-foreach (string h2 in t2) {
-    if (h2 == "Ласточка") {
-        t2[h2].Replace("Ласточка", "Кошка");
+// Задание 8
+string[] t2 = {"Меч", "Ласточка", "Бомба", "Зелье", "Гром", "Ласточка"};
+for (int i = 0; i < t2.Length; i++)
+{
+    if (t2[i] == "Ласточка")
+    {
+        t2[i] = t2[i].Replace("Ласточка", "Кошка");
     }
+}
+Console.WriteLine(string.Join(", ", t2));
+
+// Задание 9
+string[] minon = { "Garrus", "Tali", "Mordin", "Grunt", "Jack"};
+string[] roles = { "Лидер команды", "Техник", "Биотик", "Солдат", "Поддержка" };
+
+if (minon.Length != roles.Length)
+{
+    Console.WriteLine("error");
+    return;
+}
+
+for (int i = 0; i < minon.Length; i++)
+{
+    Console.WriteLine($"{roles[i]}: {minon[i]}");
 }
